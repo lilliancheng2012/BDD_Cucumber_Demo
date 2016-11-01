@@ -23,9 +23,9 @@ public class CustomerController {
 	CustomerService customerService;
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
-	public Customer createCustomer(@RequestBody Customer customer) {
+	public String createCustomer(@RequestBody Customer customer) {
 		Customer a = customerService.createCustomer(customer);
-		return a;
+		return "Customer added successfully";
 	}
 	
 	@RequestMapping(value = "/query/{id}",method = RequestMethod.GET)
