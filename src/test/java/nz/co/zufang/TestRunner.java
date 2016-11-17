@@ -7,7 +7,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/resources/CRUDFeatures/User.feature",
+//		features = "src/test/resources/CRUDFeatures/UserCreate.feature",
+//		features = "src/test/resources/CRUDFeatures/UserLogin.feature",
+		features = "src/test/resources/CRUDFeatures/UserList.feature",
 		glue = {"nz.co.zufang.steps"},
 		plugin = {"html:target/site/cucumber-pretty", "junit:target/site/cucumber.xml"}
 	)

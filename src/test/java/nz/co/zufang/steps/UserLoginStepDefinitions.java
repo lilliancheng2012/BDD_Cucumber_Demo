@@ -8,28 +8,28 @@ import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import nz.co.zufang.model.BasicUserReg;
+import nz.co.zufang.model.BasicUserLogin;
 import nz.co.zufang.model.GenericResponse;
 
-public class UserStepDefinitions {
-	
-	BasicUserReg user;
+public class UserLoginStepDefinitions {
+
+	BasicUserLogin user;
 	String endpoint;
 	GenericResponse response;
-
-	@Given("^The Server endpoint URL \"([^\"]*)\"$")
-	public void the_Server_endpoint_URL(String url) throws Throwable {
+	
+	@Given("^The Server endpoint login URL \"([^\"]*)\"$")
+	public void the_Server_endpoint_login_URL(String url) throws Throwable {
 		endpoint = url;
 	}
-
-	@Given("^create a new user as below:$")
-	public void create_a_new_user_as_below(DataTable dataTable) throws Throwable {
-		List<BasicUserReg> userList = dataTable.asList(BasicUserReg.class);
+	
+	@Given("^user name and password as below:$")
+	public void user_name_and_password_as_below(DataTable dataTable) throws Throwable {
+		List<BasicUserLogin> userList = dataTable.asList(BasicUserLogin.class);
 		user = userList.get(0);
 	}
-
-	@When("^send the POST request to restAPI$")
-	public void send_the_POST_request_to_restAPI() throws Throwable {
+	
+	@When("^send the POST request to login restAPI$")
+	public void send_the_POST_request_to_login_restAPI() throws Throwable {
 		
 		Gson gson = new Gson();
 		String body = gson.toJson(user);
@@ -44,8 +44,8 @@ public class UserStepDefinitions {
 		.as(GenericResponse.class);
 	}
 
-	@Then("^should receive the following message$")
-	public void should_receive_the_following_message(String expectedValue) throws Throwable {
+	@Then("^should receive the following login success message$")
+	public void should_receive_the_following_login_success_message(String expectedValue) throws Throwable {
 		assertEquals(expectedValue,response.getMessage());
 	}
 	
