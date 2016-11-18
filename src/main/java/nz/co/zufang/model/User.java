@@ -5,186 +5,360 @@ import java.util.Date;
 /**
  * Created by Lillian on 2/25/2016.
  */
-//@Entity
-//@Table(name = "TBL_USER")
 public class User {
-//    @Id
-//    @Column(name = "UID", unique = true)
-//    @GeneratedValue(generator = "system-uuid")
-//    @GenericGenerator(name = "system-uuid", strategy = "uuid")
-    private String uid;
-//    @Column(name = "USERNAME")
-    private String username;
-//    @Column(name = "EMAIL")
-    private String email;
-//    @Column(name = "PASSWORD")
-    private String password;
-//    @Temporal(TemporalType.TIMESTAMP)
-//    @Column(name = "CREATED_DT")
-    private Date createdDt;
-//    @Column(name = "REGISTER_IP")
-    private String registerIp;
-//    @Temporal(TemporalType.TIMESTAMP)
-//    @Column(name = "LAST_LOGIN_TIME")
-    private Date lastLoginTime;
-//    @Column(name = "LAST_LOGIN_IP")
-    private String lastLoginIp;
-//    @Temporal(TemporalType.TIMESTAMP)
-//    @Column(name = "SEND_MAIL_TIME")
-    private Date sendMailTime;
-//    @Column(name = "IM_ACCOUNT")
-    private String imAccount;
-//    @Column(name = "PHONE")
-    private String phone;
-//    @Column(name = "ADDRESS")
-    private String address;
-//    @Column(name = "MAP_POINT")
-    private String mapPoint;
-//    @Column(name = "MONEY")
-    private Double money;
-//    @Temporal(TemporalType.TIMESTAMP)
-//    @Column(name = "LAST_POST_TIME")
-    private Date lastPostTime;
-//    @Column(name = "STATUS")
-    private String status;
+	
+	/** The uid. */
+	private String uid;
+	
+	/** The username. */
+	private String username;
+	
+	/** The email. */
+	private String email;
+	
+	/** The password. */
+	private String password;
+	
+	/** The created dt. */
+	private Date createdDt;
+	
+	/** The register ip. */
+	private String registerIp;
+	
+	/** The last login time. */
+	private Date lastLoginTime;
+	
+	/** The last login ip. */
+	private String lastLoginIp;
+	
+	/** The send mail time. */
+	private Date sendMailTime;
+	
+	/** The im account. */
+	private String imAccount;
+	
+	/** The phone. */
+	private String phone;
+	
+	/** The address. */
+	private String address;
+	
+	/** The map point. */
+	private String mapPoint;
+	
+	/** The money. */
+	private Double money;
+	
+	/** The last post time. */
+	private Date lastPostTime;
+	
+	/** The status. */
+	private String status;
 
-    public User() {
-    }
+	/**
+	 * Instantiates a new user.
+	 */
+	public User() {
+	}
 
-    public User(BasicUserReg userReg) {
-        this.username = userReg.getUsername();
-        this.password = userReg.getPassword();
-        this.email = userReg.getEmail();
-        this.createdDt = new Date();
-    }
+	/**
+	 * Instantiates a new user.
+	 *
+	 * @param userReg the user reg
+	 */
+	public User(BasicUserReg userReg) {
+		this.username = userReg.getUsername();
+		this.password = userReg.getPassword();
+		this.email = userReg.getEmail();
+		this.createdDt = new Date();
+	}
 
-
-    public String getUid() {
+	/**
+	 * Gets the uid.
+	 *
+	 * @return the uid
+	 */
+	public String getUid() {
 		return uid;
 	}
 
+	/**
+	 * Sets the uid.
+	 *
+	 * @param uid the new uid
+	 */
 	public void setUid(String uid) {
 		this.uid = uid;
 	}
 
+	/**
+	 * Gets the username.
+	 *
+	 * @return the username
+	 */
 	public String getUsername() {
 		return username;
 	}
 
+	/**
+	 * Sets the username.
+	 *
+	 * @param username the new username
+	 */
 	public void setUsername(String username) {
 		this.username = username;
 	}
 
+	/**
+	 * Gets the email.
+	 *
+	 * @return the email
+	 */
 	public String getEmail() {
-        return email;
-    }
+		return email;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	/**
+	 * Sets the email.
+	 *
+	 * @param email the new email
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	/**
+	 * Gets the password.
+	 *
+	 * @return the password
+	 */
+	public String getPassword() {
+		return password;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	/**
+	 * Sets the password.
+	 *
+	 * @param password the new password
+	 */
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public Date getCreatedDt() {
-        return createdDt;
-    }
+	/**
+	 * Gets the created dt.
+	 *
+	 * @return the created dt
+	 */
+	public Date getCreatedDt() {
+		return createdDt;
+	}
 
-    public void setCreatedDt(Date createdDt) {
-        this.createdDt = createdDt;
-    }
+	/**
+	 * Sets the created dt.
+	 *
+	 * @param createdDt the new created dt
+	 */
+	public void setCreatedDt(Date createdDt) {
+		this.createdDt = createdDt;
+	}
 
-    public String getRegisterIp() {
-        return registerIp;
-    }
+	/**
+	 * Gets the register ip.
+	 *
+	 * @return the register ip
+	 */
+	public String getRegisterIp() {
+		return registerIp;
+	}
 
-    public void setRegisterIp(String registerIp) {
-        this.registerIp = registerIp;
-    }
+	/**
+	 * Sets the register ip.
+	 *
+	 * @param registerIp the new register ip
+	 */
+	public void setRegisterIp(String registerIp) {
+		this.registerIp = registerIp;
+	}
 
-    public Date getLastLoginTime() {
-        return lastLoginTime;
-    }
+	/**
+	 * Gets the last login time.
+	 *
+	 * @return the last login time
+	 */
+	public Date getLastLoginTime() {
+		return lastLoginTime;
+	}
 
-    public void setLastLoginTime(Date lastLoginTime) {
-        this.lastLoginTime = lastLoginTime;
-    }
+	/**
+	 * Sets the last login time.
+	 *
+	 * @param lastLoginTime the new last login time
+	 */
+	public void setLastLoginTime(Date lastLoginTime) {
+		this.lastLoginTime = lastLoginTime;
+	}
 
-    public String getLastLoginIp() {
-        return lastLoginIp;
-    }
+	/**
+	 * Gets the last login ip.
+	 *
+	 * @return the last login ip
+	 */
+	public String getLastLoginIp() {
+		return lastLoginIp;
+	}
 
-    public void setLastLoginIp(String lastLoginIp) {
-        this.lastLoginIp = lastLoginIp;
-    }
+	/**
+	 * Sets the last login ip.
+	 *
+	 * @param lastLoginIp the new last login ip
+	 */
+	public void setLastLoginIp(String lastLoginIp) {
+		this.lastLoginIp = lastLoginIp;
+	}
 
-    public Date getSendMailTime() {
-        return sendMailTime;
-    }
+	/**
+	 * Gets the send mail time.
+	 *
+	 * @return the send mail time
+	 */
+	public Date getSendMailTime() {
+		return sendMailTime;
+	}
 
-    public void setSendMailTime(Date sendMailTime) {
-        this.sendMailTime = sendMailTime;
-    }
+	/**
+	 * Sets the send mail time.
+	 *
+	 * @param sendMailTime the new send mail time
+	 */
+	public void setSendMailTime(Date sendMailTime) {
+		this.sendMailTime = sendMailTime;
+	}
 
-    public String getImAccount() {
-        return imAccount;
-    }
+	/**
+	 * Gets the im account.
+	 *
+	 * @return the im account
+	 */
+	public String getImAccount() {
+		return imAccount;
+	}
 
-    public void setImAccount(String imAccount) {
-        this.imAccount = imAccount;
-    }
+	/**
+	 * Sets the im account.
+	 *
+	 * @param imAccount the new im account
+	 */
+	public void setImAccount(String imAccount) {
+		this.imAccount = imAccount;
+	}
 
-    public String getPhone() {
-        return phone;
-    }
+	/**
+	 * Gets the phone.
+	 *
+	 * @return the phone
+	 */
+	public String getPhone() {
+		return phone;
+	}
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+	/**
+	 * Sets the phone.
+	 *
+	 * @param phone the new phone
+	 */
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
 
-    public String getAddress() {
-        return address;
-    }
+	/**
+	 * Gets the address.
+	 *
+	 * @return the address
+	 */
+	public String getAddress() {
+		return address;
+	}
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+	/**
+	 * Sets the address.
+	 *
+	 * @param address the new address
+	 */
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    public String getMapPoint() {
-        return mapPoint;
-    }
+	/**
+	 * Gets the map point.
+	 *
+	 * @return the map point
+	 */
+	public String getMapPoint() {
+		return mapPoint;
+	}
 
-    public void setMapPoint(String mapPoint) {
-        this.mapPoint = mapPoint;
-    }
+	/**
+	 * Sets the map point.
+	 *
+	 * @param mapPoint the new map point
+	 */
+	public void setMapPoint(String mapPoint) {
+		this.mapPoint = mapPoint;
+	}
 
-    public Double getMoney() {
-        return money;
-    }
+	/**
+	 * Gets the money.
+	 *
+	 * @return the money
+	 */
+	public Double getMoney() {
+		return money;
+	}
 
-    public void setMoney(Double money) {
-        this.money = money;
-    }
+	/**
+	 * Sets the money.
+	 *
+	 * @param money the new money
+	 */
+	public void setMoney(Double money) {
+		this.money = money;
+	}
 
-    public Date getLastPostTime() {
-        return lastPostTime;
-    }
+	/**
+	 * Gets the last post time.
+	 *
+	 * @return the last post time
+	 */
+	public Date getLastPostTime() {
+		return lastPostTime;
+	}
 
-    public void setLastPostTime(Date lastPostTime) {
-        this.lastPostTime = lastPostTime;
-    }
+	/**
+	 * Sets the last post time.
+	 *
+	 * @param lastPostTime the new last post time
+	 */
+	public void setLastPostTime(Date lastPostTime) {
+		this.lastPostTime = lastPostTime;
+	}
 
-    public String getStatus() {
-        return status;
-    }
+	/**
+	 * Gets the status.
+	 *
+	 * @return the status
+	 */
+	public String getStatus() {
+		return status;
+	}
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+	/**
+	 * Sets the status.
+	 *
+	 * @param status the new status
+	 */
+	public void setStatus(String status) {
+		this.status = status;
+	}
 
 }
