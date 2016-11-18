@@ -14,7 +14,6 @@ import cucumber.api.java.en.When;
 import io.restassured.response.Response;
 import nz.co.zufang.model.User;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class UserUpdateDefinition.
  */
