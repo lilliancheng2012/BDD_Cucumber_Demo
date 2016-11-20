@@ -3,19 +3,19 @@ Feature: Login user
 	Login user with rest api
 
 Background: 
-	Given The Server endpoint login URL "http://localhost:8080/rent/login" 
+	Given The Server endpoint login URL "http://localhost:5000/rent/login" 
 	
 	
 Scenario: Login with correct user name and password 
 	Given user name and password as below: 
 		| userName | password |
-		| lillian  | pass2016 |
+		| testuser | pass2016 |
 	When send the POST request to login restAPI 
 	Then should receive the following login success message 
 	"""
 	Login successfully
 	"""
-	
+
 	
 Scenario: Login with incorrect user name and password
 #Login with incorrect user name and password

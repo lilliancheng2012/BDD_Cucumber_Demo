@@ -3,7 +3,7 @@ Feature: List all user
 	List user with rest api
 
 Background: 
-	Given The Server endpoint list users URL "http://localhost:8080/rent/listUsers"  
+	Given The Server endpoint list users URL "http://localhost:5000/rent/listUsers"  
 	
 	
 Scenario: List all users 

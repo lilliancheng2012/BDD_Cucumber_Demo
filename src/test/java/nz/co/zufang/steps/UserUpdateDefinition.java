@@ -25,6 +25,12 @@ public class UserUpdateDefinition {
 	/** The user. */
 	User user;
 	
+	/** The user 1. */
+	User user1;
+	
+	/** The find user by username response. */
+	Response findUserByUsernameResponse;
+	
 	/** The response. */
 	Response response; 
 	
@@ -39,6 +45,25 @@ public class UserUpdateDefinition {
 		endpoint = url;
 	}
 
+	
+	/**
+	 * Exsiting user.
+	 *
+	 * @param username the username
+	 * @throws Throwable the throwable
+	 */
+	@Given("^exsiting user \"([^\"]*)\"$")
+	public void exsiting_user(String username) throws Throwable {
+		findUserByUsernameResponse = expect()
+				.given()
+				.contentType("application/json")
+				.get("http://localhost:5000/rent/findUserByUsername/" + username)
+				.andReturn();
+		user1 = findUserByUsernameResponse.getBody().as(User.class);
+		
+	}
+	
+	
 	/**
 	 * The update details for the user as below.
 	 *
@@ -49,8 +74,10 @@ public class UserUpdateDefinition {
 	public void the_update_details_for_the_user_as_below(DataTable dataTable) throws Throwable {
 		List<User> userList = dataTable.asList(User.class);
 		user = userList.get(0);
+		user.setUid(user1.getUid());
 	}
 
+	
 	/**
 	 * Send the POS T request to update user rest API.
 	 *
@@ -69,8 +96,9 @@ public class UserUpdateDefinition {
 		        .post(endpoint);
 	}
 
+	
 	/**
-	 * The response code should be.
+	 * The response success code should be.
 	 *
 	 * @param expectedValue the expected value
 	 * @throws Throwable the throwable
@@ -80,15 +108,4 @@ public class UserUpdateDefinition {
 		assertEquals(200, response.getStatusCode());
 	}
 
-	
-	/**
-	 * The response failure code should be.
-	 *
-	 * @param expectedValue the expected value
-	 * @throws Throwable the throwable
-	 */
-	@Then("^the response failure code should be \"([^\"]*)\"$")
-	public void the_response_failure_code_should_be(String expectedValue) throws Throwable {
-		assertEquals(400, response.getStatusCode());
-	}
 }

@@ -14,7 +14,6 @@ import io.restassured.response.Response;
 public class UserListDefinitions {
 
 	/** The response. */
-	// List<User> userList;
 	Response response;
 	
 	/** The endpoint. */

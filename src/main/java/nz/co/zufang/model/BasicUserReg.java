@@ -5,7 +5,7 @@ package nz.co.zufang.model;
  */
 public class BasicUserReg {
 	
-    /** The email. */
+	/** The email. */
     private String email;
     
     /** The username. */
@@ -130,4 +130,5 @@ public class BasicUserReg {
     public void setAddress(String address) {
         this.address = address;
     }
+    
 }

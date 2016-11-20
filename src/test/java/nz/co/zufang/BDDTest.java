@@ -14,10 +14,14 @@ import cucumber.api.junit.Cucumber;
 //		features = "src/test/resources/CRUDFeatures/UserLogin.feature",
 //		features = "src/test/resources/CRUDFeatures/UserList.feature",
 //		features = "src/test/resources/CRUDFeatures/UserUpdate.feature",
-		features = "src/test/resources/CRUDFeatures/UserDelete.feature",
+//		features = "src/test/resources/CRUDFeatures/UserDelete.feature",
+		features = "src/test/resources/CRUDFeatures/",
 		glue = {"nz.co.zufang.steps"},
-		plugin = {"html:target/site/cucumber-pretty", "junit:target/site/cucumber.xml"}
+		plugin = {
+				"html:target/cucumber-html-report", "json:target/cucumber.json", "pretty:target/cucumber-pretty.txt",
+				"usage:target/cucumber-usage.json", "junit:target/cucumber-results.xml" }
 	)
-public class TestRunner {
+
+public class BDDTest {
 
 }

@@ -36,6 +36,7 @@ public class UserLoginStepDefinitions {
 		endpoint = url;
 	}
 	
+	
 	/**
 	 * User name and password as below.
 	 *
@@ -47,6 +48,7 @@ public class UserLoginStepDefinitions {
 		List<BasicUserLogin> userList = dataTable.asList(BasicUserLogin.class);
 		user = userList.get(0);
 	}
+	
 	
 	/**
 	 * Send the POS T request to login rest API.
@@ -68,6 +70,7 @@ public class UserLoginStepDefinitions {
 		.body()
 		.as(GenericResponse.class);
 	}
+
 
 	/**
 	 * Should receive the following login success message.

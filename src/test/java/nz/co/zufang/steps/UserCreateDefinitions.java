@@ -12,9 +12,9 @@ import nz.co.zufang.model.BasicUserReg;
 import nz.co.zufang.model.GenericResponse;
 
 /**
- * The Class UserStepDefinitions.
+ * The Class UserCreateDefinitions.
  */
-public class UserStepDefinitions {
+public class UserCreateDefinitions {
 	
 	/** The user. */
 	BasicUserReg user;
@@ -23,7 +23,8 @@ public class UserStepDefinitions {
 	String endpoint;
 	
 	/** The response. */
-	GenericResponse response;
+	static GenericResponse response;
+
 
 	/**
 	 * The server endpoint URL.
@@ -36,6 +37,7 @@ public class UserStepDefinitions {
 		endpoint = url;
 	}
 
+
 	/**
 	 * Creates the a new user as below.
 	 *
@@ -47,6 +49,7 @@ public class UserStepDefinitions {
 		List<BasicUserReg> userList = dataTable.asList(BasicUserReg.class);
 		user = userList.get(0);
 	}
+
 
 	/**
 	 * Send the POS T request to rest API.
@@ -68,6 +71,7 @@ public class UserStepDefinitions {
 		.body()
 		.as(GenericResponse.class);
 	}
+
 
 	/**
 	 * Should receive the following message.
