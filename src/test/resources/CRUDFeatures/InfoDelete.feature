@@ -1,6 +1,6 @@
-# Feature/User Delete Feature
-Feature: Delete a user 
-	Delete a user with rest api
+# Feature/Info Delete Feature
+Feature: Delete a Info 
+	Delete a Info with rest api
 
 Background: 
 	Given The Server endpoint delete info URL "http://localhost:5000/deleteInfo/" 

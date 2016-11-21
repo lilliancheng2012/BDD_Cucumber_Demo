@@ -1,6 +1,6 @@
-# Feature/Info Create Feature
-Feature: Create new info 
-	Create new info with rest api
+# Feature/Info list all Feature
+Feature: List all info 
+	List all info with rest api
 
 Background: 
 	Given The Server endpoint list info URL "http://localhost:5000/list"

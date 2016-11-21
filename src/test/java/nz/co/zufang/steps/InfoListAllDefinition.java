@@ -9,9 +9,9 @@ import cucumber.api.java.en.When;
 import io.restassured.response.Response;
 
 /**
- * The Class InfoListDefinition.
+ * The Class InfoListAllDefinition.
  */
-public class InfoListDefinition {
+public class InfoListAllDefinition {
 
 	/** The endpoint. */
 	String endpoint;

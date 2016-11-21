@@ -11,7 +11,7 @@ import io.restassured.response.Response;
 /**
  * The Class UserListDefinitions.
  */
-public class UserListDefinitions {
+public class UserListAllDefinitions {
 
 	/** The response. */
 	Response response;

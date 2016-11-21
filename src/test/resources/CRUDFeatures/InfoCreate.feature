@@ -1,4 +1,4 @@
-# Feature/Info Create Feature
+# Feature/Create Info Feature
 Feature: Create new info 
 	Create new info with rest api
 
