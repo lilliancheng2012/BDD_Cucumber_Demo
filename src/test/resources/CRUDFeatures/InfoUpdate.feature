@@ -7,8 +7,8 @@ Background:
 	
 Scenario: Update an exist Info 
 	Given the update details for the info as below:
-		| id                               | address             | content        | description        | email                 | fee   | keywords        | linkMan     | mapPoint      | phone      | postArea        | qq        | title        |
-		| 4028d081588659f00158866ad2e90006 | update address test | update content | update description | updateemail@gmail.com | 99.00 | update keywords | Mrs Lillian | test mapPoint | 0225647776 | update postArea | 331991079 | update title |
+		| id                               | address        | content        | description        | email                 | fee   | keywords        | linkMan     | mapPoint      | phone      | postArea        | qq        | title        |
+		| 4028d081588659f00158866ad2e90006 | update address | update content | update description | updateemail@gmail.com | 99.00 | update keywords | Mrs Lillian | test mapPoint | 0225647776 | update postArea | 331991079 | update title |
 
 	When send the POST request to update Info restAPI
 	Then the response success status is "200"
