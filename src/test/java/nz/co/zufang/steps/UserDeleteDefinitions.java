@@ -100,8 +100,8 @@ public class UserDeleteDefinitions {
 	 * @param expectedValue the expected value
 	 * @throws Throwable the throwable
 	 */
-	@Then("^the failure response message should be:$")
-	public void the_failure_response_message_and_status_code_should_be(String expectedValue) throws Throwable {
+	@Then("^the failure response status should be \"([^\"]*)\"$")
+	public void the_failure_response_status_should_be(String arg1) throws Throwable {
 		assertEquals(400, response.getStatusCode());
 	}
 }

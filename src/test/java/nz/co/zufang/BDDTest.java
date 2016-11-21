@@ -10,9 +10,7 @@ import cucumber.api.junit.Cucumber;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(
-//		features = "src/test/resources/CRUDFeatures/",
-//		features = "src/test/resources/CRUDFeatures/InfoCreate.feature",
-		features = "src/test/resources/CRUDFeatures/InfoList.feature",
+		features = "src/test/resources/CRUDFeatures/",
 		
 		glue = {"nz.co.zufang.steps"},
 		plugin = {

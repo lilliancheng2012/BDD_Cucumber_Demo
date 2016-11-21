@@ -15,7 +15,4 @@ Scenario: Delete an exist user
 Scenario: Delete a invalid user
 	Given Delete a invalid user id is "0123"
 	When send the DELETE request
-	Then the failure response message should be:
-	"""
-	No class nz.co.zufang.model.User entity with id 0123 exists!
-	"""
+	Then the failure response status should be "400" 
