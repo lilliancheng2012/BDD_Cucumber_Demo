@@ -39,11 +39,8 @@ Run `mvn spring-boot:run` to start Rest Rent APi service. After server starting,
 #### Example for feature and step definitions
 
 1. Create test case for UserCreate.feature
-
 ![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/22-11-16/Cucumber%20feature.PNG)
-
 2. Create Step definitions for the UserCreate.feature
-
 ![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/22-11-16/StepDefinition.png)
 ![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/22-11-16/StepDefinitions1.PNG)
 
@@ -60,8 +57,6 @@ After run completed, check the build status and results.
 The Cucumber report plugin will generated the report after executing the test cases, go to Project folder, check report under `\target\cucumber-html-reports\cucumber-html-reports`
 
 ![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/22-11-16/Overview%20feature%20reports.png)
-
-We can view status of all the featuers, and able to click one of the feature to view details.
 
 ![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/22-11-16/status%20of%20all%20features.png)
 
