@@ -13,18 +13,19 @@ This project provides Backend APIs for properties rental websites , IOS and Andr
 - [Junit 4](http://junit.org/junit4/) Unit Testing Tool
 - [Mysql](https://www.mysql.com/) - Databse
 - [Swagger](http://swagger.io/swagger-ui/) - Swagger UI is a dependency-free collection of HTML, Javascript, and CSS assets that dynamically generate beautiful documentation and sandbox from a Swagger-compliant API.
-
+- [Cucumber](https://www.mysql.com/) - Cucumber
  
-### Install Cucumber
-
-1. Search `Cucumber Editor` in Eclipse -> Help -> Install New Software.
-2. Download and install it.
-![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/22-11-16/install%20cucumber.PNG)
-
-
-### Add Cucumber report plugin in pom.xml
-
-![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/22-11-16/Add%20cucumber%20report%20plugin.PNG)
+### Cucumber Dependencies
+    <dependency>
+		<groupId>info.cukes</groupId>
+		<artifactId>cucumber-java</artifactId>
+		<version>1.2.4</version>
+	</dependency>
+    <dependency>
+		<groupId>info.cukes</groupId>
+		<artifactId>cucumber-junit</artifactId>
+		<version>1.2.4</version>
+	</dependency>
 
 ### Run Rent API Application
 
@@ -43,6 +44,10 @@ Run `mvn spring-boot:run` to start Rest Rent APi service. After server starting,
 2. Create Step definitions for the UserCreate.feature
 ![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/22-11-16/StepDefinition.png)
 ![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/22-11-16/StepDefinitions1.PNG)
+
+### Add Cucumber report plugin in pom.xml
+
+![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/22-11-16/Add%20cucumber%20report%20plugin.PNG)
 
 ### Run Test Cases
 Run `mvn clean install` to install dependencies.
