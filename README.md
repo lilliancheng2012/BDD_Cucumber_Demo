@@ -47,7 +47,26 @@ Run `mvn spring-boot:run` to start Rest Rent APi service. After server starting,
 
 ### Add Cucumber report plugin in pom.xml
 
-![](https://raw.githubusercontent.com/lilliancheng2012/lilliancheng2012.github.io/master/public/img/posts/22-11-16/Add%20cucumber%20report%20plugin.PNG)
+    <plugin>
+		<groupId>net.masterthought</groupId>
+		<artifactId>maven-cucumber-reporting</artifactId>
+		<version>3.2.0</version>
+		<executions>
+				<execution>
+					<id>execution</id>
+					<phase>verify</phase>
+					<goals>
+						<goal>generate</goal>
+					</goals>
+					<configuration>
+						<projectName>cucumber-jvm-example</projectName>
+						<outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
+						<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+						<parallelTesting>false</parallelTesting>
+					</configuration>
+				 </execution>
+		</executions>
+	</plugin>
 
 ### Run Test Cases
 Run `mvn clean install` to install dependencies.
